@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	
+	<title>Edit Payroll</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<!-- Datatable CSS -->
+	<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/line-awesome.min.css">
+
+
+	<link rel="stylesheet" href="assets/css/style.css">
+     <!--datepicker link-->
+     <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+	
+	<link rel="stylesheet" href="assets/plugins/summernote/dist/summernote-bs4.css">
+	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+    <body>
+    <div class="main_wrapper">
+        <!--main header-->
+        <div class="header">
+
+			<a id="toggle_btn" href="javascript:void(0);">
+				<span class="bar-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
+            <div class="page-title-box">
+				<h3>PDRLRA SYSTEM</h3>
+			</div>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <!--menue-->
+            <ul class="nav user-menu">
+				<li class="nav-item dropdown has-arrow main-drop">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						<span class="user-img"><img src="assets/img/1614246362.jpg" alt="">
+							<span class="status online"></span></span>
+						<span>Admin</span>
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</li>
+			</ul>
+            <div class="dropdown mobile-user-menu">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+						class="fa fa-ellipsis-v"></i></a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="profile.html">My Profile</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</div>
+</div>
+<!--sidebar section start-->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="index.html" class="logo d-flex justify-content-center">
+                    <img src="assets/img/olivi.png" width="100" height="auto" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="index.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Dashboard</span></a>
+            </li>
+
+            <li>
+                <a href="Members.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Members</span></a>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Payroll </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="payroll1.html"> Payroll </a></li>
+                    <li><a href="expense.html"> Expense </a></li>
+                    <li><a href="income.html"> Income</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Appointments </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="appointmentList.html"> Appointment List </a></li>
+                    <li><a href="appointmentGames.html"> Appointment Game </a></li>
+                    <li><a href="updaterate.html">Updates Rate</a></li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> System Admins </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="systemusers.html"> System User</a></li>
+                    <li><a href="roles.html"> Role</a></li>
+                    <li><a href="Auditlogs.html">Audit Login</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-user-friends" style="font-size: 18px;"></i> <span> Reports </span> <span
+                 class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="viewreports.html">View Reports </a></li>
+                    <li><a href="createreport.html">Create Reports </a></li>
+                    <li><a href="createteam.html">Create Teams</a></li>
+                        <li><a href="createdivision.html">Create Divivisions</a></li>
+        </ul>
+     </li> 
+</ul>
+</div>
+</div>
+</div>
+<!--end of sidebar-->
+
+<!--page hader section start-->
+  <div class="page-wrapper" style="min-height: 382px;">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h3 class="page-title">Edit Payroll</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="Index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Edit Payroll
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 mb-3">
+                <div class="card mb-0">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Edit Payroll</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="needs-validation" novalidate>
+                                    <div class="form-row">
+                                       
+                                        <div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                <label>Round</label>
+                                                <select class="form-control select-pay">
+                                                    <option>Round 1</option>
+                                                    <option>Round 2</option>
+                                                    <option>Round 3</option>
+                                                    <option>Round 4</option>
+                                                    <option>Round 5</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="amount">
+                                              Home Team
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="hometeam"
+                                                    name="amount" value="Hill District" required>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="col-md-6 mb-3">
+                                            <label for="amount">
+                                              Away Team
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="awayteam"
+                                                    name="amount" value="Hill District" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Grade</label>
+                                                <select class="form-control select-pay">
+                                                    <option>A</option>
+                                                    <option>B</option>
+                                                    <option>C</option>
+                                                    <option>D</option>
+                                                    <option>E</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Role</label>
+                                                <select class="form-control select-pay">
+                                                    <option>Refree</option>
+                                                    <option>Coach</option>
+                                                    <option>Refree</option>
+                                                    <option>Coach</option>
+                                                    <option>Refree</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-3">
+                                            <label for="amount">
+                                              Pay Rate
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" id="awayteam"
+                                                    name="amount" value="41.38" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button class="btn btn-primary submit-btn">Update</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  <!---Data Table-->
+  </div>
+  
+
+<!--end page header section-->
+
+
+
+<!--script section-->
+    
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+
+	<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+
+	<script src="assets/js/select2.min.js"></script>
+
+	
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script src="assets/js/form-validation.js"></script>
+
+	<script src="assets/js/app.js"></script>
+
+
+	
+
+	<script src="assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+   
+<!--datepicker link-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
+	<script>
+	$('.js-example-basic-single').select2();
+	</script>
+
+<script>
+    $(function() {
+        $( "#my_date_picker" ).datepicker({
+            dateFormat: 'dd-mm-yy',
+            defaultDate:"24-09-2019"
+        });
+    });
+    
+ date= new Date();
+ year= date.getFullYear();
+ month=date.getMonth()+1;
+ day=date.getDate()
+ document.getElementById('my_date_picker').value=day+"-"+month+"-"+year;
+    </script>
+    </body>
+</html>

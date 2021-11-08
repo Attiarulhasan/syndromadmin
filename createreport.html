@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	
+	<title>Create report</title>
+
+	<!-- Favicon -->
+	 <!-- Favicon -->
+     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+ 
+     <!-- Fontawesome CSS -->
+     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+     <!-- Datatable CSS -->
+     <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+ 
+     <!-- Select2 CSS -->
+     <link rel="stylesheet" href="assets/css/select2.min.css">
+ 
+     <!-- Datetimepicker CSS -->
+     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+ 
+     <!-- Lineawesome CSS -->
+     <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+ 
+     <!-- Main CSS -->
+     <link rel="stylesheet" href="assets/css/style.css">
+ 
+     <!-- Summernote CSS -->
+     <link rel="stylesheet" href="assets/plugins/summernote/dist/summernote-bs4.css">
+         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+          <!--data table links-->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+         <!--datepicker link-->
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+
+</head>
+    <body>
+    <div class="main_wrapper">
+        <!--main header-->
+        <div class="header">
+
+			<a id="toggle_btn" href="javascript:void(0);">
+				<span class="bar-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
+            <div class="page-title-box">
+				<h3>PDRLRA SYSTEM</h3>
+			</div>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <!--menue-->
+            <ul class="nav user-menu">
+				<li class="nav-item dropdown has-arrow main-drop">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						<span class="user-img"><img src="assets/img/1614246362.jpg" alt="">
+							<span class="status online"></span></span>
+						<span>Admin</span>
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</li>
+			</ul>
+            <div class="dropdown mobile-user-menu">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+						class="fa fa-ellipsis-v"></i></a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="profile.html">My Profile</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</div>
+</div>
+<!--sidebar section start-->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="index.html" class="logo d-flex justify-content-center">
+                    <img src="assets/img/olivi.png" width="100" height="auto" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="index.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Dashboard</span></a>
+            </li>
+
+            <li>
+                <a href="Members.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Members</span></a>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Payroll </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="payroll1.html"> Payroll </a></li>
+                    <li><a href="expense.html"> Expense </a></li>
+                    <li><a href="income.html"> Income</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Appointments </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="appointmentList.html"> Appointment List </a></li>
+                    <li><a href="appointmentGames.html"> Appointment Game </a></li>
+                    <li><a href="updaterate.html">Updates Rate</a></li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> System Admins </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="systemusers.html"> System User</a></li>
+                    <li><a href="roles.html"> Role</a></li>
+                    <li><a href="Auditlogs.html">Audit Login</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-user-friends" style="font-size: 18px;"></i> <span> Reports </span> <span
+                 class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="viewreports.html">View Reports </a></li>
+                    <li><a href="createreport.html">Create Reports </a></li>
+             <li><a href="createteam.html">Create Teams</a></li>
+             <li><a href="createdivision.html">Create Divisions</a></li>
+        </ul>
+     </li> 
+</ul>
+</div>
+</div>
+</div>
+<!--end of sidebar-->
+<!--page hader section start-->
+  <div class="page-wrapper" style="min-height: 382px;">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row ">
+                <div class="col-sm-12 mb-3">
+                    <div class="card mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0 text-center">Create Report</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Parramtta District Rugby League Refrees Association</h5>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="form-group">
+                                                <label class="modal-label">Match day coaching stylesheet
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="form-control select-pay">
+                                                    <option>Under 15's A Grade</option>
+                                                    <option>Under 17's  Under 14's</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-5">
+                                            <div class="form-group">
+                                                <label class="modal-label">Age/Divisions
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="form-control select-pay">
+                                                    <option>Under 15 Div A</option>
+                                                    <option>Under 14 Div </option>
+                                                    <option>Under 14 Div A</option>
+                                                    <option>Under 15 Div A</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label class="modal-label">Date
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <div class="cal-icon">
+                                                <input class="form-control " id="my_date_picker" name="endDate" type="text" value="(DD-MM-YYYY)" style>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="modal-label">Members Name
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select class="form-control select-pay">
+                                            <option>Ali Sobah</option>
+                                            <option>Harrison Byssari</option>
+                                            <option>Ethan Murry</option>
+                                            <option>Olivia lawne</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="modal-label">Home Team
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <select class="form-control select-pay">
+                                                <option>All saints Toggbie</option>
+                                                <option>Harrison Byssari</option>
+                                                <option>Ethan Murry</option>
+                                                <option>Olivia lawne</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="modal-label">Away Team
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select class="form-control select-pay">
+                                            <option>All saints Toggbie</option>
+                                            <option>Harrison Byssari</option>
+                                            <option>Ethan Murry</option>
+                                            <option>Olivia lawne</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="modal-label">Overall Grade
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <select class="form-control select-pay">
+                                        <option>Grade</option>
+                                        <option>Harrison Byssari</option>
+                                        <option>Ethan Murry</option>
+                                        <option>Olivia lawne</option>
+                                    </select>
+                                </div>
+                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="modal-label">Home Team Score
+                                            <span class="text-danger">*
+                                            </span>
+                                        </label>
+                                        <input class="form-control" type="number" name="home_team_score" value required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="modal-label">Away Team Score
+                                            <span class="text-danger">*
+                                            </span>
+                                        </label>
+                                        <input class="form-control" type="number" name="away_team_score" value required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="modal-label">Home Team Penalties
+                                            <span class="text-danger">*
+                                            </span>
+                                        </label>
+                                        <input class="form-control" type="number" name="home_team_penalties" value required>
+                                    </div>
+                                </div>
+                               <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="modal-label">Away Team Penalties
+                                            <span class="text-danger">*
+                                            </span>
+                                        </label>
+                                        <input class="form-control" type="number" name="away_team_penalties" value required>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="modal-label">Signals/Presentation</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="modal-label">Whistl
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <select class="form-control select-pay">
+                                        <option>Grade</option>
+                                        <option>Harrison Byssari</option>
+                                        <option>Ethan Murry</option>
+                                        <option>Olivia lawne</option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="modal-label">Signals
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <select class="form-control select-pay">
+                                    <option>Grade</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>c</option>
+                                </select>
+                            </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="modal-label">Presentation
+                                <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-control select-pay">
+                                <option>Grade</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>c</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="modal-label">Pre-Match
+                            <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-control select-pay">
+                            <option>Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>c</option>
+                        </select>
+                    </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                    <input class="form-control" type="number" name="away_team_penalties" placeholder="Note" value required>
+                            </div>
+                     </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="modal-label">Laws of the Game</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="modal-label">ID of Laws
+                            <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-control select-pay">
+                            <option>Grade</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>c</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="modal-label">Scrums
+                        <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-control select-pay">
+                        <option>Grade</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>c</option>
+                    </select>
+                </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label class="modal-label">Processes
+                    <span class="text-danger">*</span>
+                </label>
+                <select class="form-control select-pay">
+                    <option>Grade</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>c</option>
+                </select>
+            </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="modal-label">Advantage
+                <span class="text-danger">*</span>
+            </label>
+            <select class="form-control select-pay">
+                <option>Grade</option>
+                <option>A</option>
+                <option>B</option>
+                <option>c</option>
+            </select>
+        </div>
+</div>
+ </div>
+ <div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+        <input class="form-control" type="number" name="away_team_penalties" placeholder="Note" value required>
+                </div>
+         </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label class="modal-label">Game Understanding/Awareness</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="modal-label">Pen Selection
+                <span class="text-danger">*</span>
+            </label>
+            <select class="form-control select-pay">
+                <option>Grade</option>
+                <option>A</option>
+                <option>B</option>
+                <option>c</option>
+            </select>
+        </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label class="modal-label">Ruck Comms
+            <span class="text-danger">*</span>
+        </label>
+        <select class="form-control select-pay">
+            <option>Grade</option>
+            <option>A</option>
+            <option>B</option>
+            <option>c</option>
+        </select>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label class="modal-label">Caution
+            <span class="text-danger">*</span>
+        </label>
+        <select class="form-control select-pay">
+            <option>Grade</option>
+            <option>A</option>
+            <option>B</option>
+            <option>c</option>
+        </select>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label class="modal-label">Movement
+            <span class="text-danger">*</span>
+        </label>
+        <select class="form-control select-pay">
+            <option>Grade</option>
+            <option>A</option>
+            <option>B</option>
+            <option>c</option>
+        </select>
+    </div>
+</div>
+    <div class="col-sm-12">
+        <div class="form-group">
+        <input class="form-control" type="number" name="away_team_penalties" placeholder="Note" value required>
+                </div>
+         </div>
+<hr>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label class="modal-label">10m, markers & Ruck</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="modal-label">10m Distance
+                <span class="text-danger">*</span>
+            </label>
+            <select class="form-control select-pay">
+                <option>Grade</option>
+                <option>A</option>
+                <option>B</option>
+                <option>c</option>
+            </select>
+        </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label class="modal-label">10m Complaince
+            <span class="text-danger">*</span>
+        </label>
+        <select class="form-control select-pay">
+            <option>Grade</option>
+            <option>A</option>
+            <option>B</option>
+            <option>c</option>
+        </select>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label class="modal-label">Markers
+            <span class="text-danger">*</span>
+        </label>
+        <select class="form-control select-pay">
+            <option>Grade</option>
+            <option>A</option>
+            <option>B</option>
+            <option>c</option>
+        </select>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label class="modal-label">Ruck/PTB Speed
+            <span class="text-danger">*</span>
+        </label>
+        <select class="form-control select-pay">
+            <option>Grade</option>
+            <option>A</option>
+            <option>B</option>
+            <option>c</option>
+        </select>
+    </div>
+</div>
+    <div class="col-sm-12">
+        <div class="form-group">
+        <input class="form-control" type="number" name="away_team_penalties" placeholder="Note" value required>
+                </div>
+         </div>
+<hr>
+         </div>
+         <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="modal-label">Communication & Tackle ID</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="modal-label">Ruck Vocab
+                        <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-control select-pay">
+                        <option>Grade</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>c</option>
+                    </select>
+                </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label class="modal-label">Tackle ID
+                    <span class="text-danger">*</span>
+                </label>
+                <select class="form-control select-pay">
+                    <option>Grade</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>c</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label class="modal-label">Players Report
+                    <span class="text-danger">*</span>
+                </label>
+                <select class="form-control select-pay">
+                    <option>Grade</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>c</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label class="modal-label">Comms Timing
+                    <span class="text-danger">*</span>
+                </label>
+                <select class="form-control select-pay">
+                    <option>Grade</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>c</option>
+                </select>
+            </div>
+        </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                <input class="form-control" type="number" name="away_team_penalties" placeholder="Note" value required>
+                        </div>
+                 </div>
+        <hr>
+     </div>
+     <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="modal-label">Positioning</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label class="modal-label">On 10m
+                    <span class="text-danger">*</span>
+                </label>
+                <select class="form-control select-pay">
+                    <option>Grade</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>c</option>
+                </select>
+            </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="modal-label">In-Goal
+                <span class="text-danger">*</span>
+            </label>
+            <select class="form-control select-pay">
+                <option>Grade</option>
+                <option>A</option>
+                <option>B</option>
+                <option>c</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="modal-label">Start&Restart
+                <span class="text-danger">*</span>
+                <span class="text-danger">*</span>
+            </label>
+            <select class="form-control select-pay">
+                <option>Grade</option>
+                <option>A</option>
+                <option>B</option>
+                <option>c</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label class="modal-label">General Kicks
+                <span class="text-danger">*</span>
+            </label>
+            <select class="form-control select-pay">
+                <option>Grade</option>
+                <option>A</option>
+                <option>B</option>
+                <option>c</option>
+            </select>
+        </div>
+    </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+            <input class="form-control" type="number" name="away_team_penalties" placeholder="Note" value required>
+                    </div>
+         </div>
+    <hr>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="form-group">
+<label class="modal-label">
+   Coaching comments/Summary
+   <span class="text-danger">*</span>
+</label><br>
+<textarea class="form-control" rows="4" required name="coach_comment"></textarea>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <label class="modal-label">Overall Assessment</label>
+              <span class="text-danger">*</span>
+          </div>
+          <div class="col-sm-4">
+              <div class="radio">
+                  <label class="label-small-text modal-label" >
+                      <input type="radio" name="overall_assessment" value="Needing Improvements">Needing Improvements
+                  </label>
+              </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="radio">
+                <label class="label-small-text modal-label">
+                    <input type="radio" name="overall_assessment" value="Needing Improvements">Meeting Expectations
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="radio">
+                <label class="label-small-text modal-label">
+                    <input type="radio" name="overall_assessment" value="Needing Improvements">Exceeding Expectations
+                </label>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+<label class="modal-label">
+ Comments
+ <span class="text-danger">*</span>
+</label><br>
+<textarea class="form-control" rows="4" required name="coach_comment"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+             <div class="form-group">
+                <label class="modal-label">Additional file</label> 
+                <input type="file" name="file">
+            </div>
+        </div>
+    </div>
+    <div class="submit-section">
+        <button class="btn btn-primary submit-btn">Submit</button>
+    </div>
+ </div>
+</div>
+         </div>
+    </div>
+</div>
+   
+                  
+              
+<!--script section-->
+    
+ <!-- jQuery -->
+ <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+ <!-- Bootstrap Core JS -->
+ <script src="assets/js/popper.min.js"></script>
+ <script src="assets/js/bootstrap.min.js"></script>
+
+ <!-- Slimscroll JS -->
+ <script src="assets/js/jquery.slimscroll.min.js"></script>
+
+ <!-- Select2 JS -->
+ <script src="assets/js/select2.min.js"></script>
+
+ <!-- Datetimepicker JS -->
+ <script src="assets/js/moment.min.js"></script>
+ <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+ <!-- Form Validation JS -->
+ <script src="assets/js/form-validation.js"></script>
+
+ <!-- Custom JS -->
+ <script src="assets/js/app.js"></script>
+
+ <!-- Datatable JS -->
+ <script src="assets/js/jquery.dataTables.min.js"></script>
+ <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+
+ <!-- Summernote JS -->
+ <script src="assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
+
+ <!-- Select2 -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+ <script>
+     $('.js-example-basic-single').select2();
+ </script>
+
+  <!--data table links-->
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+  <!--datepicker link-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
+  <script>
+      $(document).ready(function() {
+          $('#example').DataTable();
+      } );
+  </script>
+   <script>
+    $(function() {
+        $( "#my_date_picker" ).datepicker({
+            dateFormat: 'dd-mm-yy',
+            defaultDate:"24-09-2019"
+        });
+    });
+    
+ date= new Date();
+ year= date.getFullYear();
+ month=date.getMonth()+1;
+ day=date.getDate()
+ document.getElementById('my_date_picker').value=day+"-"+month+"-"+year;
+    </script>
+    </body>
+</html>

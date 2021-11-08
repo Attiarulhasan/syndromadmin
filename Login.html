@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	
+	<title>Login</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<!-- Datatable CSS -->
+	<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/line-awesome.min.css">
+
+
+  	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!--data table CDN-->
+
+	
+	<link rel="stylesheet" href="assets/plugins/summernote/dist/summernote-bs4.css">
+	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <!--data table links-->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+
+</head>
+
+ <body class="account-page">
+     <div class="main-wrapper">
+         <div class="account-content">
+             <div class="container">
+                 <div class="account-logo">
+                     <a href="#">
+                         <img src="assets/img/olivi.png" class="img-fluid text-center " alt="Dreamguy's technologies">
+                     </a>
+                 </div>
+                 <div class="account-box">
+                     <div class="account-wrapper">
+                        <form method="post" action="#">
+                            <div class="form-group">
+                                <label class="modal-label">Email Address</label>
+                                <input class="form-control" type="email" name="email" value required autocomplete="email" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Password</label>
+                                    </div>
+                                </div>
+                                <input id="password" type="password" class="form-control" name="password" required autocomplete="current-password">
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <div class="check-form">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                                        <label class="form-check-label" for="remember">Remember Me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary account-btn" type="sumbit">Login</button>
+                            </div>
+                        </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+    
+<!--end page header section-->
+
+
+
+<!--script section-->
+    
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+
+	<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+
+	<script src="assets/js/select2.min.js"></script>
+
+	
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script src="assets/js/form-validation.js"></script>
+
+	<script src="assets/js/app.js"></script>
+
+	<script src="assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+   
+    <!--data table links-->
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+	<script>
+	$('.js-example-basic-single').select2();
+   
+	</script>
+    </body>
+</html>

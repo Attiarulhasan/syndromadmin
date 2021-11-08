@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	
+	<title>Members profile</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<!-- Datatable CSS -->
+	<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/line-awesome.min.css">
+
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!--data table CDN-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+
+
+	<link rel="stylesheet" href="assets/plugins/summernote/dist/summernote-bs4.css">
+	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+    <body>
+    <div class="main_wrapper">
+        <!--main header-->
+        <div class="header">
+
+			<a id="toggle_btn" href="javascript:void(0);">
+				<span class="bar-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
+            <div class="page-title-box">
+				<h3>PDRLRA SYSTEM</h3>
+			</div>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <!--menue-->
+            <ul class="nav user-menu">
+				<li class="nav-item dropdown has-arrow main-drop">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						<span class="user-img"><img src="assets/img/1614246362.jpg" alt="">
+							<span class="status online"></span></span>
+						<span>Admin</span>
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</li>
+			</ul>
+            <div class="dropdown mobile-user-menu">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+						class="fa fa-ellipsis-v"></i></a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="profile.html">My Profile</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</div>
+</div>
+<!--sidebar section start-->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="index.html" class="logo d-flex justify-content-center">
+                    <img src="assets/img/olivi.png" width="100" height="auto" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="index.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Dashboard</span></a>
+            </li>
+
+            <li>
+                <a href="Members.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Members</span></a>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Payroll </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="payroll1.html"> Payroll </a></li>
+                    <li><a href="expense.html"> Expense </a></li>
+                    <li><a href="income.html"> Income</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Appointments </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="appointmentList.html"> Appointment List </a></li>
+                    <li><a href="appointmentGames.html"> Appointment Game </a></li>
+                    <li><a href="updaterate.html">Updates Rate</a></li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> System Admins </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="systemusers.html"> System User</a></li>
+                    <li><a href="roles.html"> Role</a></li>
+                    <li><a href="Auditlogs.html">Audit Login</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-user-friends" style="font-size: 18px;"></i> <span> Reports </span> <span
+                 class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="viewreports.html">View Reports </a></li>
+                    <li><a href="createreport.html">Create Reports </a></li>
+                    <li><a href="createteam.html">Create Teams</a></li>
+                        <li><a href="createdivision.html">Create Divisions</a></li>
+                </ul>
+           </li> 
+        </ul>
+    </div>
+ </div>
+</div>
+<!--end of sidebar-->
+<!--page hader section start-->
+  <div class="page-wrapper" style="min-height: 382px;">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h3 class="page-title">Member Profile Harrison Bayssari </h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="Index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Members
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--page menu section---->
+
+<div class="container-fluid">
+<div class="bs-example">
+    <ul id="myTab" class="nav nav-tabs nav-tabs-bottom">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active modal-label" data-toggle="tab">Member Details</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link modal-label" data-toggle="tab">Transactions</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link modal-label" data-toggle="tab">Payroll</a>
+        </li>
+        <li class="nav-item">
+            <a href="#match_reports" class="nav-link modal-label" data-toggle="tab">Match Reports</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Personal Details</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="needs-validation" novalidate>
+                                            <div class="form-row">
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="fname">
+                                                       First Name
+                                                       <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control" id="fname" value="Harrison" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="mname">
+                                                       Middle Name
+                                                   <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control" id="mname" name="mname" value required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="lname">
+                                                       Last Name
+                                                   <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control" id="fname" name="lname" value required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="dob">
+                                                       DOB (DD-MM-YYYY)
+                                                   <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control datetimepicker" id="dob" name="date-of-birth" value="03/04/2021" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="phone-one">
+                                                       Phone #1
+                                                   <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="number" class="form-control" id="phone_one" name="phone_1" value="+3338338" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="phone-two">
+                                                       Phone #2
+                                                   </label>
+                                                   <input type="number" class="form-control" id="phone_two" name="phone_2" value>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="email-one">
+                                                       Email #1
+                                                       <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="email" class="form-control" id="email_one" name="email_1" value="info@gmail.com" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="email-one">
+                                                       Email #2
+                                                   </label>
+                                                   <input type="email" class="form-control" id="email_two" name="email_2" value>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <div class="form-group">
+                                                       <label>Gender <span class="text-danger">*</span></label>
+                                                       <select class="form-control select-pay">
+                                                           <option>Select</option>
+                                                           <option>Male</option>
+                                                           <option>Female</option>
+                                                       </select>
+                                                   </div>
+                                                   </div>
+       
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="password">
+                                                       Password
+                                                       <span class="text-danger">*</span>
+                                                   </label>
+                                                   <div class="input-group">
+                                                       <input type="text" class="form-control" id="password" name="password" required>
+                                                       <button type="button" data-toggle="tooltip" data-placement="top" data-original-title="Generate Password" class="input-group-text" onclick="geberate();" tabindex="2" value>
+                                                       <i class="fa fa-refresh"></i>
+                                                       </button>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                              <label for="address">
+                                                  Address 
+                                                  <span class="text-danger">*</span>
+                                              </label>
+                                              <div class="input-group">
+                                                  <input type="text pac-target-input" id="fulladdressText" name="address" value="E7A Super town" required placeholder="Enter a location" autocomplete="off" class="form-control">
+                                               <div class="input-group-prepend">
+                                                   <button id="geolocateButton" type="button" data-toggle="tooltip" data-placement="top" data-original-title="Use your current location" class="form-control">
+                                                       <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                                   </button>
+                                               </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                       <div class="card mb-0">
+                           <div class="card-header">
+                               <h5 class="card-title mb-0">Association Details</h5>
+                           </div>
+                           <div class="card-body">
+                               <div class="row">
+                                   <div class="col-sm">
+                                       <div class="needs-validation" novalidate>
+                                           <div class="form-row">
+                                               <div class="col-md-12 mb-3">
+                                                  <label for="member_number">
+                                                      Member Number
+                                                      <span class="text-danger">*</span>
+                                                  </label>
+                                                  <input type="text" class="form-control" id="member_number" name="member_number" value="00" required>
+                                               </div>
+                                               <div class="col-md-6 mb-3">
+                                                   <div class="form-group">
+                                                       <label>Status <span class="text-danger">*</span></label>
+                                                       <select class="form-control select-pay">
+                                                           <option>Active</option>
+                                                           <option>Non-Active</option>
+                                                       </select>
+                                                   </div>
+                                                   </div>
+                                                   <div class="col-md-6 mb-3">
+                                                       <div class="form-group">
+                                                           <label>Role <span class="text-danger">*</span></label>
+                                                           <select class="form-control select-pay">
+                                                               <option>Refree & Coach</option>
+                                                               <option>Coach</option>
+                                                               <option>Refree</option>
+                                                           </select>
+                                                       </div>
+                                                       </div>
+                                                       <div class="col-md-6 mb-3">
+                                                           <div class="form-group">
+                                                               <label>Life Member<span class="text-danger">*</span></label>
+                                                               <select class="form-control select-pay">
+                                                                   <option>Yes</option>
+                                                                   <option>No</option>
+                                                               
+                                                               </select>
+                                                           </div>
+                                                           </div>
+                                              
+                                               <div class="col-md-6 mb-3">
+                                                  <label for="dob">
+                                                      Date of joining
+                                                  
+                                                  </label>
+                                                  <input type="text" class="form-control datetimepicker" id="dob" name="date-of-birth" value required>
+                                               </div>
+                                               <div class="col-md-6 mb-3">
+                                                   <div class="form-group">
+                                                       <label>Refree level</label>
+                                                       <select class="form-control select-pay">
+                                                           <option>F1</option>
+                                                           <option>F2</option>
+                                                          
+                                                       </select>
+                                                   </div>
+                                                   </div>
+                                                   <div class="col-md-6 mb-3">
+                                                       <div class="form-group">
+                                                           <label>Coach level </label>
+                                                           <select class="form-control select-pay">
+                                                               <option>F1</option>
+                                                               <option>F2</option>
+                                                              
+                                                           </select>
+                                                       </div>
+                                                       </div>
+       
+                                               <div class="col-md-6 mb-3">
+                                                   <label for="member_number">
+                                                       WWC Number
+                                                   </label>
+                                                   <input type="text" class="form-control" id="member_number" name="member_number" value required>
+                                                </div>
+       
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="dob">
+                                                       WWC Expiry
+                                                   </label>
+                                                   <input type="text" class="form-control datetimepicker" id="dob" name="date-of-birth" value required>
+                                                </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-sm-6 mb-3">
+                       <div class="card mb-0">
+                           <div class="card-header">
+                               <h5 class="card-title mb-0">Banking Details</h5>
+                           </div>
+                           <div class="card-body">
+                               <div class="row">
+                                   <div class="col-sm">
+                                       <div class="needs-validation" novalidate>
+                                           <div class="form-row">
+                                               <div class="col-md-6 mb-3">
+                                                  <label for="member_number">
+                                                      Account Holder Name
+                                                      <span class="text-danger">*</span>
+                                                  </label>
+                                                  <input type="text" class="form-control" id="member_number" name="member_number" value required>
+                                               </div>
+                                               <div class="col-md-6 mb-3">
+                                                   <label for="member_number">
+                                                       Account Number
+                                                       <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control" id="member_number" name="member_number" value required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="member_number">
+                                                       Bank Number
+                                                       <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control" id="member_number" name="member_number" value required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="member_number">
+                                                       BSB Number
+                                                       <span class="text-danger">*</span>
+                                                   </label>
+                                                   <input type="text" class="form-control" id="member_number" name="member_number" value required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <label for="member_number">
+                                                       TFN Number
+                                                   </label>
+                                                   <input type="text" class="form-control" id="member_number" name="member_number" value required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                   <div class="form-group">
+                                                       <label>Payment frequency </label>
+                                                       <select class="form-control select-pay">
+                                                           <option>Fortnightly</option>
+                                                           <option>Monthly</option>
+                                                           <option>End of Seasson</option>
+                                                       </select>
+                                                   </div>
+                                                   </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-sm-6 mb-3">
+                       <div class="card mb-0">
+                           <div class="card-header">
+                               <h5 class="card-title mb-0">Documents</h5>
+                           </div>
+                           <div class="card-body">
+                               <div class="row">
+                                   <div class="col-sm">
+                                       <div class="needs-validation" novalidate>
+                                           <div class="form-row">
+                                               <div class="col-md-12 mb-3">
+                                                   <label for="account-holder-name">Photo</label>
+                                                   <div class="custom-file">
+                                                       <input type="file" class="custom-file-input" accept="image/x-png,image/jpeg" id="photo" name="photo">
+                                                  <label class="custom-file-label">Chose file</label>
+                                               </div>
+                                          </div>                     
+                                    </div>
+                               </div>
+                          </div>
+                     </div>
+                </div>
+           </div>
+        </div>
+        <div class="container">
+           <div class="submit-section">
+               <button class="btn btn-primary submit-btn" type="submit">Save Change</button>
+               </div>
+           </div>
+           </div>
+       </div>
+        </div>
+        <div class="tab-pane fade" id="profile">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Manage Expense</h3>
+                        </div>
+                        <div class="col-me-6 ml-auto mb-3">
+                     <a href="#" class="btn btn-primary add-btn" data-toggle="modal" data-target="#pay_run">
+                         <i class="fa fa-plus"></i>
+                         Create
+                     </a>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table mb-0 datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>Member Name </th>
+                                                <th>Expense</th>
+                                                <th>Amount</th>
+                                                <th>Notes</th>
+                                                <th>Dates</th>
+                                                <th>Paid</th>
+                                                <th>Payment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Harisson Byssari</td>
+                                                <td>$1234</td>
+                                                <td>3000</td>
+                                                <td>Payed Done</td>
+                                                <td>12-07-2021</td>
+                                                <td>yes</td>
+                                                <td>
+                                                    <a href="editexpensefirst.html" data-toggle="tooltip" data-placement="top" title class="bell-icon" data-original-title="Edit">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a> &nbsp;
+                                                    <a href="editexpense.html" data-toggle="tooltip" data-placement="top" title class="green-pencil" data-original-title="Edit">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a> 
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title class="trash-icon btnDelete" data-original-title="Delete" onclick="if(!confirm('Are you sure?')){return false;}">
+                                                        <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                               </tr>
+
+                                               <tr>
+                                                <td>John doe</td>
+                                                <td>$1234</td>
+                                                <td>3433</td>
+                                                <td>Payed Done</td>
+                                                <td>16-07-2021</td>
+                                                <td>yes</td>
+                                                <td>
+                                                    <a href="editexpensefirst.html" data-toggle="tooltip" data-placement="top" title class="bell-icon" data-original-title="Edit">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a> &nbsp;
+                                                    <a href="editexpense.html" data-toggle="tooltip" data-placement="top" title class="green-pencil" data-original-title="Edit">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a> 
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title class="trash-icon btnDelete" data-original-title="Delete" onclick="if(!confirm('Are you sure?')){return false;}">
+                                                        <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                               </tr>
+                                               <tr>
+                                                <td>Ethan Murry</td>
+                                                <td>$124</td>
+                                                <td>3120</td>
+                                                <td>Not yet Paid</td>
+                                                <td>12-07-2021</td>
+                                                <td>No</td>
+                                                <td>
+                                                    <a href="editexpensefirst.html" data-toggle="tooltip" data-placement="top" title class="bell-icon" data-original-title="Edit">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a> &nbsp;
+                                                    <a href="editexpense.html" data-toggle="tooltip" data-placement="top" title class="green-pencil" data-original-title="Edit">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a> 
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title class="trash-icon btnDelete" data-original-title="Delete" onclick="if(!confirm('Are you sure?')){return false;}">
+                                                        <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                               </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <br><br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Manage Income</h3>
+                        </div>
+                        <div class="col-me-6 ml-auto mb-3">
+                     <a href="#" class="btn btn-primary add-btn" data-toggle="modal" data-target="#create_income">
+                         <i class="fa fa-plus"></i>
+                         Create
+                     </a>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table mb-0 datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>Member Name </th>
+                                                <th>Expense</th>
+                                                <th>Amount</th>
+                                                <th>Notes</th>
+                                                <th>Dates</th>
+                                                <th>Paid</th>
+                                                <th>Payment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                            <td>Harisson Byssari</td>
+                                            <td>$664</td>
+                                            <td>35450</td>
+                                            <td>Payed Done</td>
+                                            
+                                            <td>19-07-2021</td>
+                                            <td>No</td>
+                                            <td>
+                                                <a href="editincomefirst.html" data-toggle="tooltip" data-placement="top" title class="bell-icon" data-original-title="Edit">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a> &nbsp;
+                                                <a href="editincome.html" data-toggle="tooltip" data-placement="top" title class="green-pencil" data-original-title="Edit">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a> 
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title class="trash-icon btnDelete" data-original-title="Delete" onclick="if(!confirm('Are you sure?')){return false;}">
+                                                    <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                           </tr>
+                                           <tr>
+                                            <td>Olivia Lawne</td>
+                                            <td>$9934</td>
+                                            <td>4400</td>
+                                            <td>Payed Done</td>
+                                            
+                                            <td>14-07-2021</td>
+                                            <td>yes</td>
+                                            <td>
+                                                <a href="editincomefirst.html" data-toggle="tooltip" data-placement="top" title class="bell-icon" data-original-title="Edit">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a> &nbsp;
+                                                <a href="editincome.html" data-toggle="tooltip" data-placement="top" title class="green-pencil" data-original-title="Edit">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a> 
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title class="trash-icon btnDelete" data-original-title="Delete" onclick="if(!confirm('Are you sure?')){return false;}">
+                                                    <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                           </tr>
+
+                                           <tr>
+                                            <td>Ethan Murry</td>
+                                            <td>$9934</td>
+                                            <td>4400</td>
+                                            <td>Payed Done</td>
+                                            
+                                            <td>14-07-2021</td>
+                                            <td>yes</td>
+                                            <td>
+                                                <a href="editincomefirst.html" data-toggle="tooltip" data-placement="top" title class="bell-icon" data-original-title="Edit">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a> &nbsp;
+                                                <a href="editincome.html" data-toggle="tooltip" data-placement="top" title class="green-pencil" data-original-title="Edit">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a> 
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title class="trash-icon btnDelete" data-original-title="Delete" onclick="if(!confirm('Are you sure?')){return false;}">
+                                                    <i class="fa fa-trash-alt" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                           </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="messages">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Payrun Date </th>
+                                        <th>Member Name</th>
+                                        <th>Payroll Type</th>
+                                        <th>Amount</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+</div>
+<div class="tab-pane" id="match_reports">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Match Reports</h3>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table mb-0 datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>Match Report Date </th>
+                                            <th>Created By</th>
+                                            <th>Member Name</th>
+                                            <th>Home Teams</th>
+                                            <th>Away Teams</th>
+                                            <th>Overall Grade</th>
+                                            <th>Viewed</th>
+                                            <th>View PDF</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>02-06-2021</td>
+                                            <td>Michal karma</td>
+                                            <td>Todd Pieters</td>
+                                            <td>Bankstown Bulls</td>
+                                            <td>Wentworthville United</td>
+                                            <td>A</td>
+                                            <td>Yes</td>
+                                            <td><a href="pdfreport.html" class="btn btn-sm btn-primary">View PDF</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>05-06-2021</td>
+                                            <td>Ethan Murrry</td>
+                                            <td>Todd Pieters</td>
+                                            <td>Bankstown Bulls</td>
+                                            <td>Wentworthville United</td>
+                                            <td>A</td>
+                                            <td>Yes</td>
+                                            <td><a href="pdfreport.html" class="btn btn-sm btn-primary">View PDF</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div> 
+        </div>
+    </div>
+</div>
+</div>
+    <!-- end of page menu -->
+     
+    <!--create member form-->
+   <!--modal -->
+   <div class=" modal fade " id="pay_run" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg " role="document">
+      <!-- Modal content-->
+     <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">x</span>
+            </button>
+        </div>
+        <h5 class="modal-title">Create New Expense</h5>
+        <div class="modal-body">
+        </div>
+        <div class="modal-body">
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="modal-label">Member Name</label>
+                    <select class="form-control select-pay">
+                        <option>Active Members(No life members)</option>
+                        <option>No-active Members(Life members)</option>
+                        <option>No-active Members(Life members)</option>
+                        <option>No-active Members(Life members)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="amount" class="modal-label">
+                    Amount
+            
+                </label>
+                <input type="text" class="form-control" id="fname" value required>
+             </div>
+             <div class="col-md-6 mb-3">
+                <label for="date" class="modal-label">
+                    (DD-MM-YYYY)
+                    
+                </label>
+                <input type="text" class="form-control" id="fname" value required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label class="modal-label">Expense</label>
+                        <select class="form-control select-pay">
+                            <option>Social Levy</option>
+                            <option>Social events</option>
+                            <option>Coaching</option>
+                            <option>Levy</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                       <div class="form-group">
+                        <label class="col-form-label modal-label">Description</label>
+                        <textarea rows="4" class="form-control summernote1" placeholder="Enter your message here" name="description"></textarea>
+                       </div>
+                    </div>
+                    </div>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-primary submit-btn">Create</button>
+                        <button class="btn btn-secondary submit-btn" data-dismiss="modal">Cancel</button>
+                  </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  <!--income modal-->
+
+  <div class=" modal fade " id="create_income" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg " role="document">
+      <!-- Modal content-->
+     <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">x</span>
+            </button>
+        </div>
+        <h5 class="modal-title">Create New Income</h5>
+        <div class="modal-body">
+        </div>
+        <div class="modal-body">
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="modal-label">Member Name</label>
+                    <select class="form-control select-pay">
+                        <option>Ali Soba|005</option>
+                        <option>Danial Mathews</option>
+                        <option>Olivia lawne</option>
+                        <option>Ali Soba|005</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="amount" class="modal-label">
+                    Amount
+            
+                </label>
+                <input type="text" class="form-control" id="fname" value required>
+             </div>
+             <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label class="modal-label">Date(DD-MM-YYYY)
+                    </label>
+                    <div class="cal-icon">
+                    <input class="form-control datetimepicker" id="datepicker" name="endDate" type="text" style>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label class="modal-label">Income</label>
+                        <select class="form-control select-pay">
+                            <option>Games through reference</option>
+                            <option>Coach</option>
+                            <option>Executive role</option>
+                            <option>MISC</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                       <div class="form-group">
+                        <label class="col-form-label modal-label">Description</label>
+                        <textarea rows="4" class="form-control summernote1" placeholder="Enter your message here" name="description"></textarea>
+                       </div>
+                    </div>
+                    </div>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-primary submit-btn">Create</button>
+                        <button class="btn btn-secondary submit-btn" data-dismiss="modal">Cancel</button>
+                  </div>
+        </div>
+        </div>
+      </div>
+    </div>
+<!--end page header section-->
+<!--script section-->
+    
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+
+	<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+
+	<script src="assets/js/select2.min.js"></script>
+
+	
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script src="assets/js/form-validation.js"></script>
+
+	<script src="assets/js/app.js"></script>
+
+
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/dataTables.bootstrap4.min.js"></script>
+
+
+	<script src="assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+     <!--tab cdn-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!---data table links-->
+  <!-- <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+
+	<script>
+	$('.js-example-basic-single').select2();
+   
+	</script>
+
+
+<script>
+    $(document).ready(function(){ 
+        $("#myTab a").click(function(e){
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+   <!--keep the current tab active on pag reload-->
+<script>
+    $(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('#myTab a[href="' + activeTab + '"]').tab('show');
+    }
+});
+</script>
+    </body>
+</html>

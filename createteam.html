@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	
+	<title>Create Team</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<!-- Datatable CSS -->
+	<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/line-awesome.min.css">
+
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!--data table CDN-->
+
+	
+	<link rel="stylesheet" href="assets/plugins/summernote/dist/summernote-bs4.css">
+	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+          <!--data table links-->
+          <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+          <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+  
+
+</head>
+
+    <body>
+    <div class="main_wrapper">
+        <!--main header-->
+        <div class="header">
+
+			<a id="toggle_btn" href="javascript:void(0);">
+				<span class="bar-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
+            <div class="page-title-box">
+				<h3>PDRLRA SYSTEM</h3>
+			</div>
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <!--menue-->
+            <ul class="nav user-menu">
+				<li class="nav-item dropdown has-arrow main-drop">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+						<span class="user-img"><img src="assets/img/1614246362.jpg" alt="">
+							<span class="status online"></span></span>
+						<span>Admin</span>
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</li>
+			</ul>
+            <div class="dropdown mobile-user-menu">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+						class="fa fa-ellipsis-v"></i></a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="profile.html">My Profile</a>
+					<a class="dropdown-item" href="Login.html">Logout</a>
+				</div>
+			</div>
+</div>
+<!--sidebar section start-->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="index.html" class="logo d-flex justify-content-center">
+                    <img src="assets/img/olivi.png" width="100" height="auto" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="index.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Dashboard</span></a>
+            </li>
+
+            <li>
+                <a href="Members.html"><i class="fas fa-tachometer-alt" style="font-size: 18px;"></i> <span> Members</span></a>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Payroll </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="payroll1.html"> Payroll </a></li>
+                    <li><a href="expense.html"> Expense </a></li>
+                    <li><a href="income.html"> Income</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> Appointments </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="appointmentList.html"> Appointment List </a></li>
+                    <li><a href="appointmentGames.html"> Appointment Game </a></li>
+                    <li><a href="updaterate.html">Updates Rate</a></li>
+                </ul>
+            </li>
+
+            <li class="submenu">
+                <a href="#"><i class="fas fa-mountain fa-sm" style="font-size: 18px;"></i> <span> System Admins </span> <span
+                        class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="systemusers.html"> System User</a></li>
+                    <li><a href="roles.html"> Role</a></li>
+                    <li><a href="Auditlogs.html">Audit Login</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#"><i class="fas fa-user-friends" style="font-size: 18px;"></i> <span> Reports </span> <span
+                 class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="viewreports.html">View Reports </a></li>
+                    <li><a href="createreport.html">Create Reports </a></li>
+                    <li><a href="createteam.html">Create Teams</a></li>
+                    <li><a href="createdivision.html">Create Divisions</a></li>
+        </ul>
+     </li> 
+</ul>
+</div>
+</div>
+</div>
+<!--end of sidebar-->
+
+<!--page hader section start-->
+  <div class="page-wrapper" style="min-height: 382px;">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h3 class="page-title">Teams</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            
+                        </li>
+            
+                    </ul>
+                </div>
+                <div class="text-right ml-auto mb-4 clearfix">
+                 <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#roles">
+                    <i class="fa fa-plus">
+                    </i>
+                    Create
+                 </button>
+                </div>
+            </div>
+            </div>
+    </div>
+  <!---Data Table-->
+  <div class="container-fluid">
+    <table id="example" class="table table-striped table-bordered dt-responsive " style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alison parker</td>
+                <td>12/07/2021 16:38:19</td>
+                <td class="text-right">
+                    <ul class="nav">
+                        <li class="nav-item dropdown has-arrow">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <i class="fa fa-ellipsis-v ellipse-icon" aria-hidden="true"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" data-toggle="modal" data-target="#edit-name">
+                                    <span class="fa fa-pencil"></span> Edit
+                                </button>
+                                <a class="dropdown-item" href="#">
+                                    <span class="fa fa-trash"></span> Delete
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+  </div>
+<!--end page header section-->
+<div class=" modal fade " id="roles" role="dialog">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <!-- Modal content-->
+     <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">x</span>
+            </button>
+        </div>
+        <h5 class="modal-title">Create</h5>
+        <div class="modal-body">
+        </div>
+        <div class="modal-body">
+            <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="amount" class="modal-label">
+                    Name
+                </label>
+                <input type="text" class="form-control" id="fname" value required>
+             </div>
+                    </div>
+                    
+                    <br>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-primary submit-btn">Submit</button> 
+                  </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class=" modal fade " id="edit-name" role="dialog">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+          <!-- Modal content-->
+         <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">x</span>
+                </button>
+            </div>
+            <h5 class="modal-title">Edit Name</h5>
+            <div class="modal-body">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="amount" class="modal-label">
+                        Name
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="fname" value="Alison parker" required>
+                 </div>
+                        </div>
+                        
+                        <br>
+                        <div class="text-center mt-1">
+                            <button class="btn btn-primary submit-btn">Update</button>
+                            
+                      </div>
+            </div>
+            </div>
+          </div>
+        </div>
+<!--script section-->
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+
+	<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+
+	<script src="assets/js/select2.min.js"></script>
+
+	
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script src="assets/js/form-validation.js"></script>
+
+	<script src="assets/js/app.js"></script>
+
+
+	
+
+	<script src="assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+   
+
+	<script>
+	$('.js-example-basic-single').select2();
+   
+	</script>
+
+    <!--data table links-->
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+ 
+  <script>
+      $(document).ready(function() {
+          $('#example').DataTable();
+      } );
+  </script>
+  <script>
+       function myFunction(){
+          var x = document.getElementById("#myDiv");
+          if(x.style.display === "none"){
+              x.style.display="block";
+
+          }
+          else{
+              x.style.display="none";
+          }
+      }
+  </script>
+    </body>
+</html>
